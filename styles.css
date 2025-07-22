@@ -140,12 +140,4 @@ button:disabled {
     max-width: 100%;
   }
 }
-.footer {
-  margin-top: 30px;
-  padding-top: 15px;
-  font-size: 0.9rem;
-  color: #888;
-  text-align: center;
-  border-top: 1px solid #ccc;
-}
 

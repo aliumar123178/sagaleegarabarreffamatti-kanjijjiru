@@ -15,7 +15,16 @@ if (!window.SpeechRecognition) {
   const langSelect = document.getElementById('language-select');
 
   startBtn.addEventListener('click', () => {
-    recognition.lang = langSelect.value;
+    const selectedLang = langSelect.value;
+    recognition.lang = selectedLang;
+
+    // Automatically set direction for Arabic
+    if (selectedLang.startsWith('ar')) {
+      output.dir = 'rtl';
+    } else {
+      output.dir = 'ltr';
+    }
+
     recognition.start();
     startBtn.disabled = true;
     stopBtn.disabled = false;
